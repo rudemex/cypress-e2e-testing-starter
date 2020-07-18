@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://miempresa-int.bancogalicia.com.ar",
+  "env": {},
+  "viewportWidth": 1200,
+  "viewportHeight": 800,
+  "projectId": "4g38gr",
+  "reporter": "cypress-multi-reporters",
+  "reporterOptions": {
+    "configFile": "reporterOpts.json"
+  }
+}

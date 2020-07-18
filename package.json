@@ -1,0 +1,76 @@
+{
+  "name": "fe.react.mayorista.cypress",
+  "version": "1.0.0",
+  "description": "End-to-end testing with cypress.",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all -l -p cy:open",
+    "start:local": "SET CYPRESS_ENV=local&& npm-run-all -l -p cy:open",
+    "start:desa": "SET CYPRESS_ENV=desa&& npm-run-all -l -p cy:open",
+    "start:int": "SET CYPRESS_ENV=int&& npm-run-all -l -p cy:open",
+    "start:qas": "SET CYPRESS_ENV=qas&& npm-run-all -l -p cy:open",
+    "start:prd": "SET CYPRESS_ENV=prd&& npm-run-all -l -p cy:open",
+    "cy:open": "cypress open",
+    "cy:dash": "cypress run --record --key 6fed42a8-a196-4ec0-85c9-efc0af6e8a02",
+    "report": "npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
+    "cy:report": "cypress run",
+    "cy:report:spec": "cypress run --spec 'cypress/integration/Qualification/home/lookAndFeel.spec.js'",
+    "cy:report:chrome": "cypress run -b chrome",
+    "cy:report:headed": "cypress run --headed",
+    "prereport": "npm-run-all -l -s delete:mochawesomejson delete:mochawesome delete:videos delete:screenshots delete:reports",
+    "cy:mochaReport": "npx mochawesome-merge --reportDir cypress/reports/mocha > mochawesome.json",
+    "cy:mergeReport": "npx mochawesome-report-generator mochawesome.json",
+    "delete:mochawesomejson": "rm -rf mochawesome.json || true",
+    "delete:mochawesome": "rm -rf mochawesome-report/* || true",
+    "delete:videos": "rm -rf cypress/videos/* || true",
+    "delete:screenshots": "rm -rf cypress/screenshots/* || true",
+    "delete:reports": "rm -rf cypress/reports/* || true"
+  },
+  "dependencies": {
+    "cypress-commands": "^0.2.0",
+    "cypress-multi-reporters": "^1.1.23",
+    "mocha-junit-reporters": "^1.23.6"
+  },
+  "devDependencies": {
+    "cypress": "^3.4.1",
+    "cypress-file-upload": "^3.3.4",
+    "mocha": "^6.2.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi-reporters": "^1.1.7",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.1",
+    "npm-run-all": "^4.1.5"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/mochawesome",
+      "**/mochawesome/**",
+      "**/mocha",
+      "**/mocha/**",
+      "**/cypress",
+      "**/cypress/**"
+    ]
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "cy",
+      "it",
+      "beforeEach",
+      "before",
+      "afterEach",
+      "after",
+      "Cypress",
+      "addContextTestReport"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://git.bancogalicia.com.ar/Journey-AperturaEmpresas/fe.react.mayorista.cypress.git"
+  },
+  "author": "@MexDelgado"
+}
