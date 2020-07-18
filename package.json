@@ -1,7 +1,7 @@
 {
-  "name": "fe.react.mayorista.cypress",
+  "name": "cypress-fecreditoempresas",
   "version": "1.0.0",
-  "description": "End-to-end testing with cypress.",
+  "description": "End-to-end testing with cypress to spa fecreditoempresas.",
   "private": true,
   "scripts": {
     "start": "npm-run-all -l -p cy:open",
@@ -11,7 +11,6 @@
     "start:qas": "SET CYPRESS_ENV=qas&& npm-run-all -l -p cy:open",
     "start:prd": "SET CYPRESS_ENV=prd&& npm-run-all -l -p cy:open",
     "cy:open": "cypress open",
-    "cy:dash": "cypress run --record --key 6fed42a8-a196-4ec0-85c9-efc0af6e8a02",
     "report": "npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
     "cy:report": "cypress run",
     "cy:report:spec": "cypress run --spec 'cypress/integration/Qualification/home/lookAndFeel.spec.js'",
@@ -70,7 +69,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://git.bancogalicia.com.ar/Journey-AperturaEmpresas/fe.react.mayorista.cypress.git"
+    "url": "https://github.bancogalicia.com.ar/yece-creditoempresas/cypress-fecreditoempresas"
   },
-  "author": "@MexDelgado"
+  "author": "Maximiliano \"Mex\" Delgado <mdelgado@baufest.com>"
 }

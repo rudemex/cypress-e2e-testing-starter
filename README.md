@@ -1,6 +1,6 @@
-# [![Baufest](.readme-static/logo-baufest.jpg)](https://baufest.com/ "Baufest")
+# [![Banco Galicia](https://onlinebanking.bancogalicia.com.ar/images/default/logo.svg)](https://www.bancogalicia.com.ar "Banco Galicia")
 
-###### Semilla de integración
+###### SPA - Calificación Crediticia
 ## End-to-End Testing con Cypress.io
 
 [![Website link](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress.io&message=website&color=lightgrey)](https://www.cypress.io/ "Cypress.io website")
@@ -64,17 +64,11 @@ Si se desea testear para un nuevo ambiente, basta con crear el archivo **cypress
 
 `npm run cy:report`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica**.
 
-`npm run cy:dash`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica** generando los resultados y capturas de pantalla y videos de los test y los guarda en el dashboard de **Cypress.io**.
-
 `npm run report`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica** generando un archivo **HTML** dentro de la carpeta **mochawesome-report** donde contiene el resultado de todos los test.
 
 #### Reporte Mochawesome
 
 ![Reporte Mochawesoma](.readme-static/mochawesome-report.png)
-
-#### Reporte dashboard Cypress.io
-
-![Reporte Mochawesoma](.readme-static/cypress-dashboard.png)
 
 ## Custom configuration
 
@@ -171,10 +165,9 @@ Para más información, ingresá a esta entrada del blog de Cypress.io [Testing 
 - [x] ~~Configuración de cypress por ambiente.~~
 - [x] ~~Exponer y obtner los stores del Redux.~~
 - [x] ~~Agregar contextos a los resultados del reporte HTML (text, image, video, obj, etc).~~
-- [x] ~~Guardar reportes en el dashboard de Cypress.io.~~
 - [x] ~~Agregar screenshot al reporte cuando falla el test.~~
 - [x] ~~Agregar video al reporte cuando falla el test.~~
-- [ ] Actualizar Cypres.io a la v3.5.0
+- [ ] Actualizar Cypres.io a la v4.10.0
 
 ## Troubleshooting
 
@@ -216,7 +209,4 @@ https://img.shields.io/static/v1.svg?style=flat-square&label=<TEXT LABEL>&messag
 ## Authors
 
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=&message=Baufest&labelColor=FFFFFF&color=1A1A1A&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPRJREFUeNpiYEAGyvIKMwACCIX3H0QDBBCcAxNgARHbmTjAEmpADBBAMBVgEWYQISQgcAqILzNBJfcC8T5GEOuWogbIkEaAAEI3WQHZIUwMqMAAqCARZj2y5AMg/gfE82DOAgggZGOl0ExB0fkUnyTMUX+wSt59+IAR5lFsrsVp7AOgkW+B9HKYACOMAQ0VSIjevwEWBwgwRnSjgLpB4WgLUgN0wwNcVmLTCDNdERSaQKwOxMuAhjzGF+zI4ChUYwkQPwIaeIZYjTZAWxqAdACUb4wsyYJH412gLchemYJXIzA9GuIw6IUaARvP49AISqQNMA4ACfg5Aqq2GjMAAAAASUVORK5CYII=)](https://baufest.com "Baufest")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Mex%20Delgado&message=Sr.%20Developer&labelColor=1A1A1A&color=999999&logo=hackaday)](mailto:mdelgado@baufest.com "Send email to Mex")
-
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=&message=Baufest&labelColor=FFFFFF&color=1A1A1A&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPRJREFUeNpiYEAGyvIKMwACCIX3H0QDBBCcAxNgARHbmTjAEmpADBBAMBVgEWYQISQgcAqILzNBJfcC8T5GEOuWogbIkEaAAEI3WQHZIUwMqMAAqCARZj2y5AMg/gfE82DOAgggZGOl0ExB0fkUnyTMUX+wSt59+IAR5lFsrsVp7AOgkW+B9HKYACOMAQ0VSIjevwEWBwgwRnSjgLpB4WgLUgN0wwNcVmLTCDNdERSaQKwOxMuAhjzGF+zI4ChUYwkQPwIaeIZYjTZAWxqAdACUb4wsyYJH412gLchemYJXIzA9GuIw6IUaARvP49AISqQNMA4ACfg5Aqq2GjMAAAAASUVORK5CYII=)](https://baufest.com "Baufest")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Santiago%20Sosa&message=Sr.%20QA%20Automation&labelColor=1A1A1A&color=999999&logo=hackaday)](mailto:ssosa@baufest.com "Send email to Santiago")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Mex%20Delgado&message=Sr.%20Fullstack%20Developer&labelColor=1A1A1A&color=999999&logo=hackaday)](mailto:mdelgado@baufest.com "Send email to Mex")
