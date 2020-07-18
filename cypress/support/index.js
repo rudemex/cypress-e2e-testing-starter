@@ -22,6 +22,7 @@ import addContext from 'mochawesome/addContext';
 // require('./commands')
 require('cypress-commands'); // https://github.com/Lakitna/cypress-commands
 import 'cypress-file-upload'; // https://github.com/abramenal/cypress-file-upload
+import 'cypress-wait-until'; // https://github.com/NoriSte/cypress-wait-until
 
 
 /*

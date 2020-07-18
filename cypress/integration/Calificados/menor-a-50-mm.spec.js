@@ -14,9 +14,23 @@ describe("Calificados - Menor a 50MM", () => {
   });*/
 
   it("Get Store Redux", () => {
-    cy.wait(15000).window().its('store').invoke('getState').then((store) => {
+    /*cy.window().its('store').invoke('getState').then((store) => {
       console.log(store); // Return obj
-    })
+    })*/
+
+    /*cy.get('.content-gui-loading').then((loading) => {
+      if(cy.wrap(loading).should('be.visible')){
+        console.log("Cargando");
+        cy.wait(30000);
+        console.log("after wait");
+      }
+    });*/
+    /*cy.wait(15000).then( () => {
+      console.log("wait");
+    })*/
+
+
+
   });
 
 
