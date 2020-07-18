@@ -71,7 +71,7 @@ Cypress.Commands.add("upload_file", (fileName, type, selector) => {
   cy.get(selector).trigger("change", { force: true });
 });
 
-function b64toBlob(b64Data, contentType = "", sliceSize = 512) {
+const b64toBlob = (b64Data, contentType = "", sliceSize = 512) => {
   const byteCharacters = atob(b64Data);
   const byteArrays = [];
 
@@ -92,3 +92,24 @@ function b64toBlob(b64Data, contentType = "", sliceSize = 512) {
   blob.lastModifiedDate = new Date();
   return blob;
 }
+
+/*
+# =============================================================================================================
+# -- COMMAND LOGIN AND NAVIGATE TO SPA --
+# IMPLEMENTATION: cy.loginNavigate('@userData');
+# =============================================================================================================
+*/
+Cypress.Commands.add( "loginNavigate", (fixtureData) => {
+  cy.visit("");
+
+  cy.get(fixtureData).then((data) => {
+    //console.log("DATA:", data);
+    cy.get('input[name="UserID"]').type(data.username);
+    cy.get('input[name="Password"]').click({force: true}).type(data.password);
+    cy.get('#submitButton').click();
+  });
+
+  cy.url().should('eq', `${Cypress.config().baseUrl}/Balance/ConsultarSaldos`).then( () => {
+    cy.visit(`${Cypress.config().baseUrl}/Navigation/MenuLink/2509`);
+  });
+});
