@@ -12,14 +12,15 @@
 const fs = require("fs-extra");
 const path = require("path");
 
-function getConfigurationByFile(configEnvFile) {
+const getConfigurationByFile = (configEnvFile) => {
 
   // Resolve path of cypress.json env
   const pathToConfigFile = (configEnvFile === "local") ? path.resolve("./", `cypress.json`) : path.resolve("./", "config", `cypress.${configEnvFile}.json`);
-    console.log(`[i] ENV: ${configEnvFile} - PATH JSON: ${pathToConfigFile}`);
+  console.log(`[i] ENV: ${configEnvFile} - PATH JSON: ${pathToConfigFile}`);
+
   // Resolve path of env file
   const pathToConfigEnvFile = (configEnvFile === "local") ? path.resolve("./", "variables", `cypress.env`) : path.resolve("./", "variables", `cypress.${configEnvFile}.env`);
-    console.log(`[i] ENV: ${configEnvFile} - PATH ENV: ${pathToConfigEnvFile}`);
+  console.log(`[i] ENV: ${configEnvFile} - PATH ENV: ${pathToConfigEnvFile}`);
 
   return fs.readJson(pathToConfigFile).then(data => {
     console.log(`[i] READ | ENV: ${configEnvFile} CONFIG:`, data);
@@ -53,7 +54,9 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
   //console.log(config);
 
-  const CYPRESS_ENV = process.env.CYPRESS_ENV || "prd";
+  const CYPRESS_ENV = process.env.CYPRESS_ENV || "local";
+
+  console.log(`[i] CYPRESS_ENV: ${CYPRESS_ENV}`);
   // add values in env.
   config.env.ENV = CYPRESS_ENV;
   // Return config cypress.io

@@ -5,15 +5,12 @@
   "private": true,
   "scripts": {
     "start": "npm-run-all -l -p cy:open",
-    "start:local": "SET CYPRESS_ENV=local&& npm-run-all -l -p cy:open",
-    "start:desa": "SET CYPRESS_ENV=desa&& npm-run-all -l -p cy:open",
-    "start:int": "SET CYPRESS_ENV=int&& npm-run-all -l -p cy:open",
-    "start:qas": "SET CYPRESS_ENV=qas&& npm-run-all -l -p cy:open",
-    "start:prd": "SET CYPRESS_ENV=prd&& npm-run-all -l -p cy:open",
+    "start:local": "cross-env CYPRESS_ENV=local npm run start:cy:open",
+    "start:desa": "cross-env CYPRESS_ENV=desa npm run start:cy:open",
+    "start:cy:open": "npm-run-all -l -p cy:open",
     "cy:open": "cypress open",
     "report": "npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
     "cy:report": "cypress run",
-    "cy:report:spec": "cypress run --spec 'cypress/integration/Qualification/home/lookAndFeel.spec.js'",
     "cy:report:chrome": "cypress run -b chrome",
     "cy:report:headed": "cypress run --headed",
     "prereport": "npm-run-all -l -s delete:mochawesomejson delete:mochawesome delete:videos delete:screenshots delete:reports",
@@ -31,6 +28,7 @@
     "mocha-junit-reporters": "^1.23.6"
   },
   "devDependencies": {
+    "cross-env": "^7.0.2",
     "cypress": "^3.4.1",
     "cypress-file-upload": "^3.3.4",
     "mocha": "^6.2.0",
