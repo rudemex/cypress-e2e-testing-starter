@@ -24,6 +24,7 @@ test/cypress/results/*
 mochawesome.json
 mochawesome-report
 mochawesome-report/*
-
+test-results.xml
+mochawesome-report/mochawesome-report.html
 
 

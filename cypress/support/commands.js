@@ -100,6 +100,7 @@ const b64toBlob = (b64Data, contentType = "", sliceSize = 512) => {
 # =============================================================================================================
 */
 Cypress.Commands.add( "loginNavigate", (fixtureData) => {
+  const baseUrl = Cypress.config().baseUrl;
   cy.visit("");
 
   cy.get(fixtureData).then((data) => {
@@ -109,7 +110,7 @@ Cypress.Commands.add( "loginNavigate", (fixtureData) => {
     cy.get('#submitButton').click();
   });
 
-  cy.url().should('eq', `${Cypress.config().baseUrl}/Balance/ConsultarSaldos`).then( () => {
-    cy.visit(`${Cypress.config().baseUrl}/Navigation/MenuLink/2509`);
+  cy.url().should('eq', `${baseUrl}/Balance/ConsultarSaldos`).then( () => {
+    cy.visit(`${baseUrl}/Navigation/MenuLink/2509`);
   });
 });
