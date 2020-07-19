@@ -9,14 +9,11 @@ describe("Calificados - Menor a 50MM", () => {
     cy.loginNavigate('@userData');
   });
 
-  /*it("Login en Office Banking", () => {
-    cy.loginNavigate('@userData');
-  });*/
 
   it("Get Store Redux", () => {
-    /*cy.window().its('store').invoke('getState').then((store) => {
+    cy.window().its('store').invoke('getState').then((store) => {
       console.log(store); // Return obj
-    })*/
+    })
 
     /*cy.get('.content-gui-loading').then((loading) => {
       if(cy.wrap(loading).should('be.visible')){
@@ -28,8 +25,6 @@ describe("Calificados - Menor a 50MM", () => {
     /*cy.wait(15000).then( () => {
       console.log("wait");
     })*/
-
-
 
   });
 
