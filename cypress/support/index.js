@@ -24,7 +24,6 @@ require('cypress-commands'); // https://github.com/Lakitna/cypress-commands
 import 'cypress-file-upload'; // https://github.com/abramenal/cypress-file-upload
 import 'cypress-wait-until'; // https://github.com/NoriSte/cypress-wait-until
 
-
 /*
 # =============================================================================================================
 # -- ADD IMAGE AND VIDEO CONTEXT WHEN FAILED TEST --
@@ -35,23 +34,26 @@ Cypress.on('test:after:run', (test, runnable) => {
     if (test.state === 'failed') {
         console.log('[i] TEST AFTER RUN - SCREENSHOT & VIDEO WHEN FAILED TEST');
 
-        const fileName = `${runnable.parent.title} -- ${test.title}`;
+        const fileName = (test.hookName) ?
+            `${runnable.parent.title} -- ${test.title} -- ${test.hookName} hook` :
+            `${runnable.parent.title} -- ${test.title}`;
+
         // Screenshot
-        const screenshotFileName = `${fileName} (failed).png`;
+        const screenshotFileName = (`${fileName} (failed).png`).replace(/\s/g, '_');
         const pathScreenshot = `../cypress/screenshots/${Cypress.spec.name}/${screenshotFileName}`.replace(/[\\"]/g, '/');
         const titleScreenshot = 'Screenshot | Failed Test';
         // Video
         const pathVideo = `../cypress/videos/${Cypress.spec.name}.mp4`.replace(/[\\"]/g, '/');
         const titleVideo = `Video | ${test.title}`;
 
-        // console.log("===============================");
-        // console.log("TEST: ",test);
-        // console.log("RUNNABLE: ",runnable);
-        // console.log("TITLE: ",fileName);
-        // console.log("FILENAME: ",screenshotFileName);
-        // console.log("PATH: ",pathScreenshot);
-        // //console.log("VIDEO: ",pathVideo);
-        // console.log("===============================");
+        /*console.log("===============================");
+        console.log("TEST: ",test);
+        console.log("RUNNABLE: ",runnable);
+        console.log("TITLE: ",fileName);
+        console.log("FILENAME: ",screenshotFileName);
+        console.log("PATH: ",pathScreenshot);
+        console.log("VIDEO: ",pathVideo);
+        console.log("===============================");*/
 
         addContext({ test }, { title: titleScreenshot, value: pathScreenshot });
         addContext({ test }, { title: titleVideo, value: pathVideo });

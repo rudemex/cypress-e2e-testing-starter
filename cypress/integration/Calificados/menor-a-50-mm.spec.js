@@ -7,13 +7,15 @@ describe("Calificados - Menor a 50MM", () => {
 
   beforeEach( () => {
     cy.loginNavigate('@userData');
+    cy.get("#sarasa").should("be.visible");
   });
 
 
   it("Get Store Redux", () => {
     cy.window().its('store').invoke('getState').then((store) => {
       console.log(store); // Return obj
-    })
+    });
+    cy.get("#sarasa").should("be.visible");
 
     /*cy.get('.content-gui-loading').then((loading) => {
       if(cy.wrap(loading).should('be.visible')){
@@ -28,6 +30,9 @@ describe("Calificados - Menor a 50MM", () => {
 
   });
 
+  it('another test', () => {
+    cy.get("#sarasa").should("be.visible");
+  })
 
 });
 

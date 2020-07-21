@@ -54,6 +54,23 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
   //console.log(config);
 
+  on('after:screenshot', (details) =>{
+    //console.log("DETAILS: ",details);
+    const filePath = details.path.replace(/[\\"]/g, '/');
+    //console.log("PATH: ",filePath);
+
+    const newPath = filePath.replace(/\s/g, '_');
+    //console.log("NEW PATH: ",newPath);
+    return new Promise((resolve, reject) => {
+      fs.rename(filePath, newPath, (err) => {
+        if (err) return reject(err)
+
+        resolve({ path: newPath })
+      })
+    });
+
+  });
+
   const CYPRESS_ENV = process.env.CYPRESS_ENV || "local";
 
   console.log(`[i] CYPRESS_ENV: ${CYPRESS_ENV}`);

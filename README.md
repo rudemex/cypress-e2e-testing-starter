@@ -3,10 +3,9 @@
 ###### SPA - Calificación Crediticia
 ## End-to-End Testing con Cypress.io
 
-[![Website link](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress.io&message=website&color=lightgrey)](https://www.cypress.io/ "Cypress.io website")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress.io&message=v3.4.1&color=lightgrey)](https://github.com/cypress-io/cypress "Cypress.io Github")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&color=brightgreen&logo=node.js)](https://nodejs.org/es/ "Node.js website")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&color=brightgreen&logo=npm)](https://www.npmjs.com/ "Npm website")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&labelColor=339933&color=757575&logoColor=FFFFFF&logo=node.js)](https://nodejs.org/es/ "Node.js website")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm)](https://www.npmjs.com/ "Npm website")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v3.4.1&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
 
 La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y testeos correspondientes de punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para realizar las pruebas.
 
@@ -48,19 +47,20 @@ Instalar dependencias
 
 La aplicación debe estar iniciada en algún ambiente (localhost, desa, homo, int, qas, prod, etc) y se debe configurar el **baseUrl** en el archivo **cypress.json** que corresponde a su ambiente dentro de la carpeta **config**.
 
-`npm run start` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **localhost**.
+`npm run start:desa` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **desa**.
 
 `npm run start:local` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el **localhost**.
 
-`npm run start:desa` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **desa**.
+`npm run start` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **localhost**.
+
 
 Si se desea testear para un nuevo ambiente, basta con crear el archivo **cypress.json** dentro de la carpeta **config** con su configuración, agregar la tarea dentro de **scripts:{}** en el **package.json** con el nombre del nuevo ambiente y crear el archivo **.env** en variables. _(seguir la referencia de los que ya están creados)_
 
 ### Generate reports
 
-`npm run cy:report`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica**.
-
 `npm run report`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica** generando un archivo **HTML** dentro de la carpeta **mochawesome-report** donde contiene el resultado de todos los test.
+
+`npm run cy:report`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica**.
 
 #### Reporte Mochawesome
 
@@ -73,7 +73,7 @@ Se puede cambiar el valor de alguna configuración que viene por default en Cypr
 ##### Desactivar el watch de archivos
 
 ```
-// config/cypress.<env>.json
+// config/cypress<.env>.json
 {
     ...
     "watchForFileChanges":false,
@@ -163,7 +163,7 @@ Para más información, ingresá a esta entrada del blog de Cypress.io [Testing 
 - [x] ~~Agregar contextos a los resultados del reporte HTML (text, image, video, obj, etc).~~
 - [x] ~~Agregar screenshot al reporte cuando falla el test.~~
 - [x] ~~Agregar video al reporte cuando falla el test.~~
-- [ ] Actualizar Cypres.io a la v4.10.0
+- [ ] Actualizar Cypress.io a la v4.10.0
 
 ## Troubleshooting
 
