@@ -5,7 +5,7 @@
 
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&labelColor=339933&color=757575&logoColor=FFFFFF&logo=node.js)](https://nodejs.org/es/ "Node.js website")
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm)](https://www.npmjs.com/ "Npm website")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v3.4.1&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.10.0&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
 
 La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y testeos correspondientes de punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para realizar las pruebas.
 
@@ -29,10 +29,10 @@ La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y
 
 - Node.js v10.5.3
 - npm v6.4.1
-- Cypress.io v3.4.1
-- Mocha v6.2.0
+- Cypress.io v4.10.0
+- Mocha v8.0.1
+- Mochawesome v6.1.1
 - Chai
-- Report Mochawesome v4.1.0
 - Otros complementos
 
 ## Setup workspace
@@ -163,7 +163,7 @@ Para más información, ingresá a esta entrada del blog de Cypress.io [Testing 
 - [x] ~~Agregar contextos a los resultados del reporte HTML (text, image, video, obj, etc).~~
 - [x] ~~Agregar screenshot al reporte cuando falla el test.~~
 - [x] ~~Agregar video al reporte cuando falla el test.~~
-- [ ] Actualizar Cypress.io a la v4.10.0
+- [x] ~~Actualizar Cypress.io a la v4.10.0~~
 
 ## Troubleshooting
 
