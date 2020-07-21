@@ -28,9 +28,5 @@ describe("Calificados - Menor a 50MM", () => {
 
   });
 
-  it('another test', () => {
-    cy.get('#sarasa').should('be.visible');
-  });
-
 });
 
