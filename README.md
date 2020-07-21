@@ -163,7 +163,7 @@ Para más información, ingresá a esta entrada del blog de Cypress.io [Testing 
 - [x] ~~Agregar contextos a los resultados del reporte HTML (text, image, video, obj, etc).~~
 - [x] ~~Agregar screenshot al reporte cuando falla el test.~~
 - [x] ~~Agregar video al reporte cuando falla el test.~~
-- [x] Actualizar Cypres.io a la v4.10.0
+- [x] ~~Actualizar Cypress.io a la v4.10.0~~
 
 ## Troubleshooting
 
