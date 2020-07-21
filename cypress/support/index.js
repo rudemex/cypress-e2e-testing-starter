@@ -35,10 +35,9 @@ Cypress.on('test:after:run', (test, runnable) => {
     if (test.state === 'failed') {
         console.log('[i] TEST AFTER RUN - SCREENSHOT & VIDEO WHEN FAILED TEST');
 
-        const fileName = `${runnable.parent.title} -- ${test.title}`;
-
-        //cypress-fecreditoempresas/cypress/screenshots/Calificados/menor-a-50-mm.spec.js/Calificados_-_Menor_a_50MM_--_Get_Store_Redux_--_before_each_hook_(failed).png
-        //cypress-fecreditoempresas/cypress/screenshots/Calificados/menor-a-50-mm.spec.js/Calificados_-_Menor_a_50MM_--_Get_Store_Redux_(failed).png
+        const fileName = (test.hookName) ?
+            `${runnable.parent.title} -- ${test.title} -- ${test.hookName} hook` :
+            `${runnable.parent.title} -- ${test.title}`;
 
         // Screenshot
         const screenshotFileName = (`${fileName} (failed).png`).replace(/\s/g, '_');
@@ -48,14 +47,14 @@ Cypress.on('test:after:run', (test, runnable) => {
         const pathVideo = `../cypress/videos/${Cypress.spec.name}.mp4`.replace(/[\\"]/g, '/');
         const titleVideo = `Video | ${test.title}`;
 
-        console.log("===============================");
+        /*console.log("===============================");
         console.log("TEST: ",test);
         console.log("RUNNABLE: ",runnable);
         console.log("TITLE: ",fileName);
         console.log("FILENAME: ",screenshotFileName);
         console.log("PATH: ",pathScreenshot);
         console.log("VIDEO: ",pathVideo);
-        console.log("===============================");
+        console.log("===============================");*/
 
         addContext({ test }, { title: titleScreenshot, value: pathScreenshot });
         addContext({ test }, { title: titleVideo, value: pathVideo });
