@@ -111,7 +111,7 @@ Cypress.env('CYPRESS_FOO')  // 'MY FOO BAR'
 
 ## Access Redux Store
 
-Para poder acceder al **Store** del **Redux** primero hay que exponerlo para cuando Cypress inicialice la SPA.
+Para poder acceder al **Store** del **Redux** primero hay que exponerlo para cuando Cypress inicialice la aplicación.
 
 ```
 // src/app.js
