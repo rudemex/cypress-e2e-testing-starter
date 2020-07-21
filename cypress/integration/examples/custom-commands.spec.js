@@ -8,7 +8,7 @@ describe("Pruebas funcionales", () => {
     cy.visit("");
     var screenShotFileName = "show-home-page";
     cy.screenshot(screenShotFileName);
-    cy.addContextTestReport("image", "Image Home Page", "../cypress/screenshots/Qualification/menor-a-50-mm.spec.js/" + screenShotFileName + ".png");
+    cy.addContextTestReport("image", "Image Home Page", "../cypress/screenshots/Qualification/suite-test.spec.js/" + screenShotFileName + ".png");
   });
 
   it("should add context", () => {

@@ -92,25 +92,3 @@ const b64toBlob = (b64Data, contentType = "", sliceSize = 512) => {
   blob.lastModifiedDate = new Date();
   return blob;
 }
-
-/*
-# =============================================================================================================
-# -- COMMAND LOGIN AND NAVIGATE TO SPA --
-# IMPLEMENTATION: cy.loginNavigate('@userData');
-# =============================================================================================================
-*/
-Cypress.Commands.add( "loginNavigate", (fixtureData) => {
-  const baseUrl = Cypress.config().baseUrl;
-  cy.visit("");
-
-  cy.get(fixtureData).then((data) => {
-    //console.log("DATA:", data);
-    cy.get('input[name="UserID"]').type(data.username);
-    cy.get('input[name="Password"]').click({force: true}).type(data.password);
-    cy.get('#submitButton').click();
-  });
-
-  cy.url().should('eq', `${baseUrl}/Balance/ConsultarSaldos`).then( () => {
-    cy.visit(`${baseUrl}/Navigation/MenuLink/2509`);
-  });
-});

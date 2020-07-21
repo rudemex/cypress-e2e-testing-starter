@@ -5,8 +5,8 @@
     "toConsole": false
   },
   "mochawesomeReporterOptions": {
-    "reportTitle": "fecreditoempresas",
-    "reportPageTitle": "fecreditoempresas",
+    "reportTitle": "My-Report",
+    "reportPageTitle": "My-Report",
     "charts": true,
     "code": false,
     "reportDir": "cypress/reports/mocha",

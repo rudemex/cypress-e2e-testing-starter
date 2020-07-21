@@ -1,13 +1,10 @@
-# [![Banco Galicia](https://onlinebanking.bancogalicia.com.ar/images/default/logo.svg)](https://www.bancogalicia.com.ar "Banco Galicia")
-
-###### SPA - Calificación Crediticia
-## End-to-End Testing con Cypress.io
+# Cypress.io - End-to-End Testing - Starter
 
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&labelColor=339933&color=757575&logoColor=FFFFFF&logo=node.js)](https://nodejs.org/es/ "Node.js website")
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm)](https://www.npmjs.com/ "Npm website")
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.10.0&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
 
-La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y testeos correspondientes de punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para realizar las pruebas.
+La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y testeos correspondientes punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para empezar a realizar las pruebas.
 
 ## Table of Contents
 
@@ -47,11 +44,11 @@ Instalar dependencias
 
 La aplicación debe estar iniciada en algún ambiente (localhost, desa, homo, int, qas, prod, etc) y se debe configurar el **baseUrl** en el archivo **cypress.json** que corresponde a su ambiente dentro de la carpeta **config**.
 
-`npm run start:desa` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **desa**.
+`npm run start` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **localhost**.
 
 `npm run start:local` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el **localhost**.
 
-`npm run start` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **localhost**.
+`npm run start:desa` : Inicia la aplicación Cypress con una interfaz gráfica donde podrás realizar las pruebas visuales sobre los test en el ambiente de **desa**.
 
 
 Si se desea testear para un nuevo ambiente, basta con crear el archivo **cypress.json** dentro de la carpeta **config** con su configuración, agregar la tarea dentro de **scripts:{}** en el **package.json** con el nombre del nuevo ambiente y crear el archivo **.env** en variables. _(seguir la referencia de los que ya están creados)_
@@ -204,5 +201,4 @@ https://img.shields.io/static/v1.svg?style=flat-square&label=<TEXT LABEL>&messag
 
 ## Authors
 
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=&message=Baufest&labelColor=FFFFFF&color=1A1A1A&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAFoTx1HAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAPRJREFUeNpiYEAGyvIKMwACCIX3H0QDBBCcAxNgARHbmTjAEmpADBBAMBVgEWYQISQgcAqILzNBJfcC8T5GEOuWogbIkEaAAEI3WQHZIUwMqMAAqCARZj2y5AMg/gfE82DOAgggZGOl0ExB0fkUnyTMUX+wSt59+IAR5lFsrsVp7AOgkW+B9HKYACOMAQ0VSIjevwEWBwgwRnSjgLpB4WgLUgN0wwNcVmLTCDNdERSaQKwOxMuAhjzGF+zI4ChUYwkQPwIaeIZYjTZAWxqAdACUb4wsyYJH412gLchemYJXIzA9GuIw6IUaARvP49AISqQNMA4ACfg5Aqq2GjMAAAAASUVORK5CYII=)](https://baufest.com "Baufest")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Mex%20Delgado&message=Sr.%20Fullstack%20Developer&labelColor=1A1A1A&color=999999&logo=hackaday)](mailto:mdelgado@baufest.com "Send email to Mex")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Mex%20Delgado&message=Sr.%20Fullstack%20Developer&labelColor=1A1A1A&color=999999&logo=hackaday)](mailto:mdelgado@tresdoce.com.ar "Send email to Mex")

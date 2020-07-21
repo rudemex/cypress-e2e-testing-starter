@@ -79,7 +79,3 @@ module.exports = (on, config) => {
   // Return config cypress.io
   return getConfigurationByFile(CYPRESS_ENV);
 };
-
-
-//touch carbon.png && carbon-now ./cypress/plugins/index.js -p mex-dev -t App-jsx -h
-//touch carbon.png && carbon-now -p mex-dev --from-clipboard -h

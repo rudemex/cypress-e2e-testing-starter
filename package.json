@@ -1,7 +1,7 @@
 {
-  "name": "cypress-fecreditoempresas",
+  "name": "cypress-e2e-testing-starter",
   "version": "1.0.0",
-  "description": "End-to-end testing with cypress to spa fecreditoempresas.",
+  "description": "End-to-end testing with cypress.",
   "private": true,
   "scripts": {
     "start": "npm-run-all -l -p cy:open",
@@ -12,8 +12,8 @@
     "report": "cross-env CYPRESS_ENV=desa npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
     "cy:report": "cypress run",
     "cy:report:old": "./node_modules/.bin/cypress run",
-    "cy:report:chrome": "./node_modules/.bin/cypress run -b chrome",
-    "cy:report:headed": "./node_modules/.bin/cypress run --headed",
+    "cy:report:chrome": "cypress run -b chrome",
+    "cy:report:headed": "cypress run --headed",
     "prereport": "npm-run-all -l -s delete:mochawesomejson delete:mochawesome delete:videos delete:screenshots delete:reports",
     "cy:mochaReport": "npx mochawesome-merge cypress/reports/mocha/*.json > mochawesome.json",
     "cy:mergeReport": "npx mochawesome-report-generator mochawesome.json",
@@ -70,7 +70,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.bancogalicia.com.ar/yece-creditoempresas/cypress-fecreditoempresas"
+    "url": "https://github.com/rudemex/cypress-e2e-testing-starter"
   },
-  "author": "Maximiliano \"Mex\" Delgado <mdelgado@baufest.com>"
+  "author": "Maximiliano \"Mex\" Delgado <mdelgado@tresdoce.com.ar>"
 }
