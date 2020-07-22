@@ -2,7 +2,7 @@
 
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&labelColor=339933&color=757575&logoColor=FFFFFF&logo=node.js)](https://nodejs.org/es/ "Node.js website")
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm)](https://www.npmjs.com/ "Npm website")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.10.0&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
+[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.11.0&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
 
 La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y testeos correspondientes punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para empezar a realizar las pruebas.
 
@@ -26,7 +26,7 @@ La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y
 
 - Node.js v10.5.3
 - npm v6.4.1
-- Cypress.io v4.10.0
+- Cypress.io v4.11.0
 - Mocha v8.0.1
 - Mochawesome v6.1.1
 - Chai
@@ -160,9 +160,11 @@ Para más información, ingresá a esta entrada del blog de Cypress.io [Testing 
 - [x] ~~Agregar contextos a los resultados del reporte HTML (text, image, video, obj, etc).~~
 - [x] ~~Agregar screenshot al reporte cuando falla el test.~~
 - [x] ~~Agregar video al reporte cuando falla el test.~~
-- [x] ~~Actualizar Cypress.io a la v4.10.0~~
+- [x] ~~Actualizar Cypress.io a la v4.11.0~~
 
 ## Troubleshooting
+
+- **Cypress verify step --smoke-test:** a veces con la instalación de Cypress no se actualiza el cache, por lo que se recomienda correr el comando `cypress verify` y luego correr el comando`cypress open` o `cypress run` o el cualquier otro comando que inicialice la app de Cypress. En caso de que no funcione, se recomienda borrar el cache de cypress (`cypress cache clear`) y realizar los pasos mencionados anteriormente.
 
 - **Se carga Cypress, pero no se abre:** Con la actualización de node.js es probable de que la aplicación no esté actualizada a los cambios, por lo que posiblemente pueda pasar que se cargue el proyecto, pero no se abra la pantalla. Para poder ver el dash de Cypress, basta con apretar `Shift + Click Derecho` en el **icono** de Cypress en la **Barra de Tareas** y luego hacer click en **Maximizar**, esto pone la ventana en primer plano y podrás usarlo.
 
@@ -199,6 +201,6 @@ Example custom shield:
 https://img.shields.io/static/v1.svg?style=flat-square&label=<TEXT LABEL>&message=<TEXT MESSAGE>&labelColor=<HEX COLOR>&color=<HEX COLOR>&logo=<NAME OF SIMPLE ICON OR BASE64 CODE>
 ```
 
-## Authors
+## Author
 
 [![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Mex%20Delgado&message=Sr.%20Fullstack%20Developer&labelColor=1A1A1A&color=999999&logo=hackaday)](mailto:mdelgado@tresdoce.com.ar "Send email to Mex")
