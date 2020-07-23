@@ -17,7 +17,7 @@
     "cy:report:headed": "cypress run --headed",
     "prereport": "npm-run-all -l -s delete:mochawesomejson delete:mochawesome delete:videos delete:screenshots delete:reports",
     "cy:mochaReport": "npx mochawesome-merge cypress/reports/mocha/*.json > mochawesome.json",
-    "cy:mergeReport": "npx mochawesome-report-generator --cdn --charts mochawesome.json",
+    "cy:mergeReport": "npx mochawesome-report-generator --charts --assetsDir ./mochawesome-report/assets  mochawesome.json",
     "delete:mochawesomejson": "rm -rf mochawesome.json mochawesome-report.html test-results.xml || true",
     "delete:mochawesome": "rm -rf mochawesome-report/* mochawesome-report || true",
     "delete:videos": "rm -rf cypress/videos/* || true",
