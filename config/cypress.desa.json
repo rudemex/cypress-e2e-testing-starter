@@ -1,4 +1,4 @@
 {
-  "baseUrl": "https://desa.misitio.com",
+  "baseUrl": "https://example.cypress.io",
   "env": {}
 }

@@ -9,7 +9,8 @@
     "start:desa": "cross-env CYPRESS_ENV=desa npm run start:cy:open",
     "start:cy:open": "npm-run-all -l -p cy:open",
     "cy:open": "cypress open",
-    "report": "cross-env CYPRESS_ENV=desa npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
+    "report": "npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
+    "report:desa": "cross-env CYPRESS_ENV=desa npm-run-all -l -s -c prereport cy:report cy:mochaReport cy:mergeReport",
     "cy:report": "cypress run",
     "cy:report:old": "./node_modules/.bin/cypress run",
     "cy:report:chrome": "cypress run -b chrome",
@@ -18,7 +19,7 @@
     "cy:mochaReport": "npx mochawesome-merge cypress/reports/mocha/*.json > mochawesome.json",
     "cy:mergeReport": "npx mochawesome-report-generator mochawesome.json",
     "delete:mochawesomejson": "rm -rf mochawesome.json mochawesome-report.html test-results.xml || true",
-    "delete:mochawesome": "rm -rf mochawesome-report/* || true",
+    "delete:mochawesome": "rm -rf mochawesome-report/* mochawesome-report || true",
     "delete:videos": "rm -rf cypress/videos/* || true",
     "delete:screenshots": "rm -rf cypress/screenshots/* || true",
     "delete:reports": "rm -rf cypress/reports/* || true"
