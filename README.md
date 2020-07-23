@@ -61,7 +61,7 @@ Si se desea testear para un nuevo ambiente, basta con crear el archivo **cypress
 `npm run cy:report`: Inicia la aplicación cypress en modo **serverless** y realiza los testeos del lado de la terminal **sin interfaz gráfica**.
 
 #### Reporte Mochawesome
-[Live Demo Report](https://htmlpreview.github.io/?https://github.com/rudemex/cypress-e2e-testing-starter/blob/master/mochawesome-report/mochawesome.html)
+[Live Demo Report](https://raw.githack.com/rudemex/cypress-e2e-testing-starter/master/mochawesome-report/mochawesome.html)
 ![Reporte Mochawesoma](.readme-static/mochawesome-report.png)
 
 ## Custom configuration
