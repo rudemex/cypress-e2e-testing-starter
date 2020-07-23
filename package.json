@@ -1,8 +1,23 @@
 {
   "name": "cypress-e2e-testing-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "End-to-end testing with cypress.",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rudemex/cypress-e2e-testing-starter"
+  },
+  "bugs": "https://github.com/rudemex/cypress-e2e-testing-starter/issues",
+  "author": {
+    "name": "Maximiliano \"Mex\" Delgado",
+    "email": "mdelgado@tresdoce.com.ar",
+    "url": "https://rudemex.github.io/"
+  },
+  "license": "ISC",
+  "keywords": [
+    "cypress",
+    "e2e testing",
+    "end-to-end testing"
+  ],
   "scripts": {
     "start": "npm-run-all -l -p cy:open",
     "start:local": "cross-env CYPRESS_ENV=local npm run start:cy:open",
@@ -68,10 +83,5 @@
       "Cypress",
       "addContextTestReport"
     ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/rudemex/cypress-e2e-testing-starter"
-  },
-  "author": "Maximiliano \"Mex\" Delgado <mdelgado@tresdoce.com.ar>"
+  }
 }
