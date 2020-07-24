@@ -1,10 +1,27 @@
-# Cypress.io - End-to-End Testing - Starter
+<p align="center">
+  <img src="https://cloud.githubusercontent.com/assets/1268976/20607953/d7ae489c-b24a-11e6-9cc4-91c6c74c5e88.png"/>
+</p>
 
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&labelColor=339933&color=757575&logoColor=FFFFFF&logo=node.js)](https://nodejs.org/es/ "Node.js website")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm)](https://www.npmjs.com/ "Npm website")
-[![badge](https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.11.0&labelColor=17202C&color=757575&logo=cypress)](https://www.cypress.io/ "Cypress.io website")
+<h3 align="center">
+  End-to-End Testing - Starter
+</h3>
 
-La aplicación **Cypress.io** es la encargada de realizar las automatizaciones y testeos correspondientes punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para empezar a realizar las pruebas.
+<p align="center">
+  La aplicación <b>Cypress.io</b> es la encargada de realizar las automatizaciones y testeos correspondientes punta a punta de la aplicación desarrollada. Este proyecto contiene las configuraciones necesarias para empezar a realizar las pruebas.
+</p>
+
+<p align="center">
+  <a href="https://nodejs.org/es/">
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Node&message=v10.15.3&labelColor=339933&color=757575&logoColor=FFFFFF&logo=node.js" alt="Node.js website"/>
+  </a>
+  <a href="https://www.npmjs.com/">
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm" alt="Npm website"/>
+  </a>
+    <a href="https://www.cypress.io/">
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.11.0&labelColor=17202C&color=757575&logo=cypress" alt="Cypress.io website"/>
+  </a><br />
+</p>
+
 
 ## Table of Contents
 
