@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Npm&message=v6.4.1&labelColor=CB3837&logoColor=FFFFFF&color=757575&logo=npm" alt="Npm website"/>
   </a>
     <a href="https://www.cypress.io/">
-    <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v4.11.0&labelColor=17202C&color=757575&logo=cypress" alt="Cypress.io website"/>
+    <img src="https://img.shields.io/static/v1.svg?style=flat-square&label=Cypress&message=v5.3.0&labelColor=17202C&color=757575&logo=cypress" alt="Cypress.io website"/>
   </a><br />
 </p>
 
@@ -43,7 +43,7 @@
 
 - Node.js v10.5.3
 - npm v6.4.1
-- Cypress.io v4.11.0
+- Cypress.io v5.3.0
 - Mocha v8.0.1
 - Mochawesome v6.1.1
 - Mochawesome Report Generator v5.1.0
@@ -179,10 +179,13 @@ Para más información, ingresá a esta entrada del blog de Cypress.io [Testing 
 - [x] ~~Agregar screenshot al reporte cuando falla el test.~~
 - [x] ~~Agregar video al reporte cuando falla el test.~~
 - [x] ~~Actualizar Cypress.io a la v4.11.0~~
+- [x] ~~Actualizar Cypress.io a la v5.3.0~~
 
 ## Troubleshooting
 
-- **Cypress verify step --smoke-test:** a veces con la instalación de Cypress no se actualiza el cache, por lo que se recomienda correr el comando `cypress verify` y luego correr el comando`cypress open` o `cypress run` o el cualquier otro comando que inicialice la app de Cypress. En caso de que no funcione, se recomienda borrar el cache de cypress (`cypress cache clear`) y realizar los pasos mencionados anteriormente.
+- **Cypress verify step --smoke-test:** a veces con la instalación de Cypress no se actualiza el cache, por lo que se recomienda correr el comando `cypress verify` y luego correr el comando`cypress open` o `cypress run` o cualquier otro comando que inicialice la app de Cypress. En caso de que no funcione, se recomienda borrar el cache de cypress (`cypress cache clear`) y realizar los pasos mencionados anteriormente.
+
+- **Cypress verify timeout --smoke-test:** a veces tarda demasiado en realizar el smoke-test, por lo que una solución viable es aumentar el tiempo del timeout, para ello vamos a editar el valor de `VERIFY_TEST_RUNNER_TIMEOUT_MS` a `100000` (default: `30000`) que se encuentra en `./node_modules/cypress/lib/tasks/verify.js`.
 
 - **Se carga Cypress, pero no se abre:** Con la actualización de node.js es probable de que la aplicación no esté actualizada a los cambios, por lo que posiblemente pueda pasar que se cargue el proyecto, pero no se abra la pantalla. Para poder ver el dash de Cypress, basta con apretar `Shift + Click Derecho` en el **icono** de Cypress en la **Barra de Tareas** y luego hacer click en **Maximizar**, esto pone la ventana en primer plano y podrás usarlo.
 

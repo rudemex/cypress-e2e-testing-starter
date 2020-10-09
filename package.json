@@ -33,24 +33,25 @@
     "prereport": "npm-run-all -l -s delete:mochawesomejson delete:mochawesome delete:videos delete:screenshots delete:reports",
     "cy:mochaReport": "npx mochawesome-merge cypress/reports/mocha/*.json > mochawesome.json",
     "cy:mergeReport": "npx mochawesome-report-generator --charts --assetsDir ./mochawesome-report/assets  mochawesome.json",
-    "delete:mochawesomejson": "rm -rf mochawesome.json mochawesome-report.html test-results.xml || true",
-    "delete:mochawesome": "rm -rf mochawesome-report/* mochawesome-report || true",
-    "delete:videos": "rm -rf cypress/videos/* || true",
-    "delete:screenshots": "rm -rf cypress/screenshots/* || true",
-    "delete:reports": "rm -rf cypress/reports/* || true"
+    "delete:mochawesomejson": "rimraf mochawesome.json mochawesome-report.html test-results.xml || true",
+    "delete:mochawesome": "rimraf mochawesome-report/* mochawesome-report || true",
+    "delete:videos": "rimraf cypress/videos/* || true",
+    "delete:screenshots": "rimraf cypress/screenshots/* || true",
+    "delete:reports": "rimraf cypress/reports/* || true"
   },
   "dependencies": {
     "cypress-commands": "^1.1.0",
     "cypress-multi-reporters": "^1.4.0",
+    "mocha-junit-reporter": "^2.0.0",
     "mocha-junit-reporters": "^1.23.6",
-    "mocha-junit-reporter": "^2.0.0"
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "cross-env": "^7.0.2",
-    "cypress": "^4.11.0",
+    "cypress": "^5.3.0",
     "cypress-file-upload": "^4.0.7",
     "cypress-wait-until": "^1.7.1",
-    "mocha": "^8.0.1",
+    "mocha": "^8.1.3",
     "mocha-junit-reporter": "^2.0.0",
     "mocha-multi-reporters": "^1.1.7",
     "mochawesome": "^6.1.1",
