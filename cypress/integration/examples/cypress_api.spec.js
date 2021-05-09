@@ -67,7 +67,7 @@ context('Cypress.Cookies', () => {
     // now any cookie with the name 'session_id' will
     // not be cleared before each new test runs
     Cypress.Cookies.defaults({
-      whitelist: 'session_id',
+      preserve: 'session_id',
     })
   })
 })
@@ -111,12 +111,12 @@ context('Cypress.config()', () => {
     let myConfig = Cypress.config()
 
     expect(myConfig).to.have.property('animationDistanceThreshold', 5)
-    expect(myConfig).to.have.property('baseUrl', null)
+    expect(myConfig).to.have.property('baseUrl', 'https://example.cypress.io')
     expect(myConfig).to.have.property('defaultCommandTimeout', 4000)
     expect(myConfig).to.have.property('requestTimeout', 5000)
     expect(myConfig).to.have.property('responseTimeout', 30000)
-    expect(myConfig).to.have.property('viewportHeight', 660)
-    expect(myConfig).to.have.property('viewportWidth', 1000)
+    expect(myConfig).to.have.property('viewportHeight', 800)
+    expect(myConfig).to.have.property('viewportWidth', 1200)
     expect(myConfig).to.have.property('pageLoadTimeout', 60000)
     expect(myConfig).to.have.property('waitForAnimations', true)
 
@@ -217,6 +217,6 @@ context('Cypress.spec', () => {
   it('Get current spec information', () => {
     // https://on.cypress.io/spec
     // wrap the object so we can inspect it easily by clicking in the command log
-    cy.wrap(Cypress.spec).should('have.keys', ['name', 'relative', 'absolute'])
+    cy.wrap(Cypress.spec).should('have.keys', ["absolute", "name", "relative", "specFilter", "specType"])
   })
 })
