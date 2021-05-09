@@ -6,5 +6,6 @@
   "reporterOptions": {
     "configFile": "reporterOpts.json"
   },
-  "env": {}
+  "env": {},
+  "projectId": "d6hg7q"
 }
