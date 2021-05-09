@@ -7,5 +7,12 @@
     "configFile": "reporterOpts.json"
   },
   "env": {},
-  "projectId": "d6hg7q"
+  "projectId": "d6hg7q",
+  "testFiles": [
+    "**/*.spec.js",
+    "**/*.it.js",
+    "**/*.test.js",
+    "**/*.e2e.js",
+    "**/*.feature"
+  ]
 }
