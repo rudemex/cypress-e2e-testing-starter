@@ -1,6 +1,6 @@
 {
   "name": "cypress-e2e-testing-starter",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "End-to-end testing with cypress.",
   "repository": {
     "type": "git",
